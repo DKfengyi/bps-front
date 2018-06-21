@@ -1,0 +1,24 @@
+2018-06-21 09:17:46.889 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:zookeeper.version=3.5.0-alpha-1615249, built on 08/01/2014 22:13 GMT
+2018-06-21 09:17:46.892 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:host.name=192.168.244.1
+2018-06-21 09:17:46.893 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.version=1.7.0_80
+2018-06-21 09:17:46.894 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.vendor=Oracle Corporation
+2018-06-21 09:17:46.894 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.home=C:\Program Files\Java\jdk1.7.0_80\jre
+2018-06-21 09:17:46.895 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.class.path=F:\maven\apache-maven-3.5.3\bin\..\boot\plexus-classworlds-2.5.2.jar
+2018-06-21 09:17:46.896 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_80\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\jre\bin;\Program Files\Java\jdk1.8.0_161;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\maven\apache-maven-3.5.3\bin;C:\Program Files (x86)\HW TwainDriver\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\54659\AppData\Local\Microsoft\WindowsApps;;.
+2018-06-21 09:17:46.897 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.io.tmpdir=C:\Users\54659\AppData\Local\Temp\
+2018-06-21 09:17:46.897 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:java.compiler=<NA>
+2018-06-21 09:17:46.898 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.name=Windows 8.1
+2018-06-21 09:17:46.898 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.arch=amd64
+2018-06-21 09:17:46.898 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.version=6.3
+2018-06-21 09:17:46.899 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:user.name=54659
+2018-06-21 09:17:46.899 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:user.home=C:\Users\54659
+2018-06-21 09:17:46.899 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:user.dir=F:\IDEA_Work_Space\baoyinxiaofei\bps-front
+2018-06-21 09:17:46.900 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.memory.free=253MB
+2018-06-21 09:17:46.900 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.memory.max=1797MB
+2018-06-21 09:17:46.900 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.logEnv(): - Client environment:os.memory.total=334MB
+2018-06-21 09:17:46.901 INFO  [main] [|] org.apache.zookeeper.ZooKeeper.<init>(): - Initiating client connection, connectString=172.16.1.57:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@3a97edbc
+2018-06-21 09:17:46.925 INFO  [main-SendThread(172.16.1.57:2181)] [|] org.apache.zookeeper.ClientCnxn.logStartConnect(): - Opening socket connection to server 172.16.1.57/172.16.1.57:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-21 09:17:46.928 INFO  [main-SendThread(172.16.1.57:2181)] [|] org.apache.zookeeper.ClientCnxn.primeConnection(): - Socket connection established to 172.16.1.57/172.16.1.57:2181, initiating session
+2018-06-21 09:17:46.984 INFO  [main-SendThread(172.16.1.57:2181)] [|] org.apache.zookeeper.ClientCnxn.onConnected(): - Session establishment complete on server 172.16.1.57/172.16.1.57:2181, sessionid = 0x163c488343003ec, negotiated timeout = 30000
+2018-06-21 09:17:49.917 INFO  [DubboShutdownHook] [|] org.apache.zookeeper.ZooKeeper.close(): - Session: 0x163c488343003ec closed
+2018-06-21 09:17:49.917 INFO  [main-EventThread] [|] org.apache.zookeeper.ClientCnxn.run(): - EventThread shut down

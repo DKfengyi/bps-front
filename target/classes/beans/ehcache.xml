@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false">
+
+	<diskStore path="java.io.tmpdir" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache eternal="false" overflowToDisk="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+
+	<!-- Special objects setting. -->
+	<!-- Refresh sysParamCache every hour. -->
+	<cache name="sysParamCache" overflowToDisk="false" eternal="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+
+	<cache name="sysSmsformatCache" overflowToDisk="false" eternal="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+	<cache name="ItsFeeParamCache" overflowToDisk="false" eternal="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+	<cache name="ItsShareTypeCache" overflowToDisk="false" eternal="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+	<cache name="TrxActivityRuleCache" overflowToDisk="false" eternal="false"
+		diskPersistent="false" timeToLiveSeconds="36000" timeToIdleSeconds="36000"
+		maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" />
+
+</ehcache>

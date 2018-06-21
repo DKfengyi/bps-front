@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--不重试，避免事件重复记录，影响规则统计-->
+    <dubbo:consumer retries="0" registry="registry"/>
+    <!--bps-core提供接口-->
+    <dubbo:reference id="olChannelService" interface="com.bsb.bps.service.OlChannelService" timeout="10000"/>
+    <dubbo:reference id="olSubChannelService" interface="com.bsb.bps.service.OlSubChannelService" timeout="10000"/>
+    <dubbo:reference id="olStoreService" interface="com.bsb.bps.service.OlStoreService" timeout="10000"/>
+    <dubbo:reference id="olCustomerService" interface="com.bsb.bps.service.OlCustomerService" timeout="10000"/>
+    <dubbo:reference id="olRoleService" interface="com.bsb.bps.service.OlRoleService" timeout="10000"/>
+    <dubbo:reference id="olOperationLogService" interface="com.bsb.bps.service.OlOperationLogService" timeout="10000"/>
+    <dubbo:reference id="departService" interface="com.bsb.bps.service.DepartService" timeout="10000"/>
+    <dubbo:reference id="appLoginService" interface="com.bsb.bps.service.AppLoginService" timeout="10000"/>
+    <dubbo:reference id="initBusinessApplyService" interface="com.bsb.bps.service.InitBusinessApplyService" timeout="10000"/>
+    <dubbo:reference id="olIdCardInfoService" interface="com.bsb.bps.service.OlIdCardInfoService" timeout="10000"/>
+    <dubbo:reference id="olSmsLogService" interface="com.bsb.bps.service.OlSmsLogService" timeout="10000"/>
+
+    <!--其他系统提供接口-->
+    <dubbo:reference id="dynamicSmsService" interface="com.smy.cif.service.DynamicSmsService" check="false"
+                     registry="registry" timeout="30000"/>
+</beans>
+
+

@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bsb.bps</groupId>
+    <artifactId>bps-front</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>bps-front</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cif-version>0.0.7-SNAPSHOT</cif-version>
+        <junit-version>4.12</junit-version>
+        <bps-api-version>0.0.1-SNAPSHOT</bps-api-version>
+        <smyframework-version>0.0.6-SNAPSHOT</smyframework-version>
+        <aut-security-version>0.0.3-SNAPSHOT</aut-security-version>
+        <poi.version>3.9</poi.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.smy.cif</groupId>
+            <artifactId>cif-api</artifactId>
+            <version>${cif-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.bsb.bps</groupId>
+            <artifactId>bps-api</artifactId>
+            <version>${bps-api-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.smy.framework</groupId>
+            <artifactId>smyframework-core</artifactId>
+            <version>${smyframework-version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-lang3</artifactId>
+                    <groupId>org.apache.commons</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-lgpl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-lgpl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.5.0-alpha</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jsp-2.1</artifactId>
+            <version>6.1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>6.1.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.smy.aut</groupId>
+            <artifactId>aut-security</artifactId>
+            <version>${aut-security-version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>smyframework-core</artifactId>
+                    <groupId>com.smy.framework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+
+        <!--excel导入导出工具包-->
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-base</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-web</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-annotation</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.32</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>bps-front</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <!-- not append assembly id in release file name -->
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <finalName>${project.artifactId}</finalName>
+                    <descriptors>
+                        <descriptor>src/main/assemble/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <classesDirectory>target/ntf-oms/</classesDirectory>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!-- 配置文件置换 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                    <exclude>**/.svn/*</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <!-- test测试环境 -->
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo
+                <dubbo.registry.address>zookeeper://172.16.1.69:2181</dubbo.registry.address>-->
+                <dubbo.registry.address>zookeeper://127.0.0.1:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+            </properties>
+        </profile>
+        <!-- 82开发环境 -->
+        <profile>
+            <id>dev_82</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.82:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+            </properties>
+        </profile>
+
+        <!-- 57开发环境 -->
+        <profile>
+            <id>dev_57</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.57:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.57/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <!-- 58开发环境 -->
+        <profile>
+            <id>dev_58</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.58:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.58/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <!-- 81开发环境 -->
+        <profile>
+            <id>dev_81</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.81:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.81/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <!-- 98开发环境 -->
+        <profile>
+            <id>dev_98</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.98:2181</dubbo.registry.address>
+                <!-- <dubbo.registry.address>zookeeper://127.0.0.1:2181</dubbo.registry.address>-->
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.82:26379,172.16.1.82:26380,172.16.1.82:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>f:\\</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.98/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat63</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.63:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.63:26379,172.16.1.63:26380,172.16.1.63:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.63/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat68</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo-->
+                <dubbo.registry.address>zookeeper://172.16.1.68:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.68:26379,172.16.1.68:26380,172.16.1.68:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.68/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat85</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.85:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.85:26379,172.16.1.85:26380,172.16.1.85:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.85/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat86</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://172.16.1.86:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>172.16.1.86:26379,172.16.1.86:26380,172.16.1.86:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.85/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+        <!-- 生产环境 -->
+        <profile>
+            <id>prd</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- Spring Resource -->
+                <application.beans.properties_path>
+                    <![CDATA[file://home/coreapp/tomcat/profile/]]></application.beans.properties_path>
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://10.10.3.111:2181?backup=10.10.3.112:2181,10.10.3.113:2181
+                </dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28771</dubbo.protocol.port>
+
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>10.10.3.111:26379,10.10.3.112:26379,10.10.3.113:26379</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/bpsimg/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://10.10.3.5/bsimg/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://10.10.3.5/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat88</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- jetty -->
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <version>6.1.26</version>
+                        <configuration>
+                            <webApp>${basedir}/target/bps-front.war</webApp>
+                            <scanIntervalSeconds>10</scanIntervalSeconds>
+                            <connectors>
+                                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                    <port>9080</port>
+                                </connector>
+                            </connectors>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <application.beans.properties_path><![CDATA[classpath:]]></application.beans.properties_path>
+
+                <!-- dubbo -->
+                <dubbo.registry.address>zookeeper://127.0.0.1:2181</dubbo.registry.address>
+                <app.process.name>bps-front</app.process.name>
+                <dubbo.application.name>bps-front</dubbo.application.name>
+                <dubbo.protocol.port>28702</dubbo.protocol.port>
+                <!-- logback -->
+                <log.level>debug</log.level>
+                <log.base>logs/bps-front</log.base>
+
+                <!-- redis -->
+                <redis.minIdle>2</redis.minIdle>
+                <redis.maxIdle>5</redis.maxIdle>
+                <redis.maxTotal>10</redis.maxTotal>
+                <redis.maxWaitMillis>5000</redis.maxWaitMillis>
+                <redis.testOnBorrow>true</redis.testOnBorrow>
+                <redis.testWhileIdle>false</redis.testWhileIdle>
+                <redis.ips>127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381</redis.ips>
+                <redis.mastname>mymaster</redis.mastname>
+                <redis.password>byxf2016</redis.password>
+                <file.path>/b2bdz/</file.path>
+                <!-- 证件信息上传地址 -->
+                <idImageUrl>http://172.16.1.88/bsdata/img/</idImageUrl>
+                <uploadImageUrl>/bsdata/img/</uploadImageUrl>
+                <bankLogoImageUrl>http://172.16.1.70/sitimg/bank/</bankLogoImageUrl>
+            </properties>
+        </profile>
+    </profiles>
+</project>

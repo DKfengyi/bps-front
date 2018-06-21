@@ -1,0 +1,46 @@
+/*=========================多条件查询样式=========================*/
+#searchTable td {
+    text-align: right;
+}
+/*条件查询文字样式*/
+.searchChannelWord {
+    border: 4px solid #ffffff;
+    outline:none;
+    font-size: 12px;
+}
+/*多条件查询td样式*/
+.searchChannelTd {
+}
+
+/*=========================几个按钮样式===========================*/
+.operationButton{
+    width: 70px;
+    border-radius:5px;
+    background-color:#ffffff;
+    border-width:1px;
+}
+/*=========================新增弹框样式===========================*/
+/*弹框table样式*/
+.channelTable {
+    width: 97%;
+    height: 87%;
+    margin-top: 2%;
+}
+
+.channelTable td{
+    border-top: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+    outline:none;
+}
+
+/*新增渠道中文字样式*/
+.channelWordTd {
+    width: 80px;
+    text-align: right;
+}
+
+/*新增渠道中框样式*/
+.addChannelCaseTd {
+}
+
+/*========================查看渠道详情样式=======================*/
